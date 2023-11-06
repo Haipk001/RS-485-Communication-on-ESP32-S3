@@ -33,9 +33,9 @@ void loop() {
   uint16_t sensorValue = analogRead(analogPin);
 
   // Update the holding register with the sensor value
-  mb.Hreg(REGN, sensorValue); // Store the value in holding register 0
+  mb.Hreg(REGN, sensorValue); // Store the value in holding register 1
   delay(100); // Add a small delay for stability
-  // It's strongly recommended to run .task() multiple times withn timeout period (that is 1 second by default)
+  // It's strongly recommended to run .task() multiple times within timeout period (that is 1 second by default)
   
   yield();
   //Serial.println(sensorValue);
